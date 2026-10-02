@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>المركز الوطني لدراسة تصرفات إبراهيم</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card-bg: #161b22;
+      --accent: #ff4757;
+      --yellow: #ffa502;
+      --text: #f0f6fc;
+      --muted: #8b949e;
+      --border: #30363d;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Alexandria', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2.5rem 1rem;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255, 71, 87, 0.15);
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 0.3rem 1rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 760px;
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
+
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Stats Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .stat-item {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .stat-val {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--accent);
+      margin-top: 0.3rem;
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    /* Excuse Generator */
+    .excuse-box {
+      background: #090d13;
+      border: 1px dashed var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--yellow);
+      margin-bottom: 1rem;
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      border-radius: 10px;
+      padding: 0.8rem 1.5rem;
+      transition: transform 0.1s ease, filter 0.2s ease;
+    }
+
+    button:active {
+      transform: scale(0.98);
+    }
+
+    .btn-primary {
+      background-color: var(--text);
+      color: var(--bg);
+      width: 100%;
+    }
+
+    .btn-primary:hover {
+      filter: brightness(0.9);
+    }
+
+    /* The Impossible Button Arena */
+    .arena {
+      position: relative;
+      height: 180px;
+      background: #090d13;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    #runawayBtn {
+      position: absolute;
+      background-color: var(--accent);
+      color: #fff;
+      padding: 0.7rem 1.2rem;
+      border-radius: 8px;
+      transition: top 0.15s ease, left 0.15s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="badge">تقرير غير سري إطلاقاً</div>
+    <h1>مرصد فعاليات إبراهيم 📊</h1>
+    <p>النظام المعتمد لرصد التصريفات وسلوكيات الأخلاق العامة</p>
+  </header>
+
+  <div class="container">
+
+    <!-- الإحصائيات -->
+    <div class="card">
+      <div class="card-title">🚨 مؤشرات الحالة والسلوك</div>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-label">نسبة أن إبراهيم غير محترم</div>
+          <div class="stat-val">99.99%</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">متوسط وقت الـ 5 دقايق فعلياً</div>
+          <div class="stat-val">ساعتين</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">احتمالية يقول "أنا نايم" وهو أونلاين</div>
+          <div class="stat-val">100%</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- مولد الأعذار -->
+    <div class="card">
+      <div class="card-title">🎲 مولد أعذار إبراهيم الرسمية للطلعات</div>
+      <div class="excuse-box" id="excuseDisplay">
+        اضغط على الزر لمعرفة عذر اليوم
+      </div>
+      <button class="btn-primary" onclick="generateExcuse()">استخرج عذر جديد</button>
+    </div>
+
+    <!-- زر المستحيل -->
+    <div class="card">
+      <div class="card-title">🎯 زر: إبراهيم يصير محترم</div>
+      <div class="arena" id="arena">
+        <button id="runawayBtn" onmouseover="dodgeButton()" ontouchstart="dodgeButton()" onclick="alert('مستحيل! غش واختراق للنظام!')">
+          اضغط هنا عشان إبراهيم يصير محترم
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const excuses = [
+      "«توي قايم من النوم والله» (وهو قاعد يلعب من العصر)",
+      "«الوالد يبيني أوديه مشوار ضروري»",
+      "«شوي وأكلمك قاعد أتعشى» (يختفي لليوم الثاني)",
+      "«والله ما شفت رسالتك الجوال كان صامت»",
+      "«في زحمة غير طبيعية عند الإشارة» (توه لابس شماغه)",
+      "«بمر الحلاق سريع وأجيكم» (أكبر فخ بالتاريخ)"
+    ];
+
+    function generateExcuse() {
+      const display = document.getElementById("excuseDisplay");
+      const randomExcuse = excuses[Math.floor(Math.random() * excuses.length)];
+      display.textContent = randomExcuse;
+    }
+
+    function dodgeButton() {
+      const btn = document.getElementById("runawayBtn");
+      const arena = document.getElementById("arena");
+
+      const maxX = arena.clientWidth - btn.clientWidth - 20;
+      const maxY = arena.clientHeight - btn.clientHeight - 20;
+
+      const randomX = Math.max(10, Math.floor(Math.random() * maxX));
+      const randomY = Math.max(10, Math.floor(Math.random() * maxY));
+
+      btn.style.left = randomX + "px";
+      btn.style.top = randomY + "px";
+    }
+  </script>
+</body>
+</html>
